@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribers Notes - IT Gurukul</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+        }
+        #notes {
+            display: none;
+            margin-top: 20px;
+            background: white;
+            padding: 20px;
+        }
+    </style>
+
+    <script>
+        function checkPassword() {
+            var pass = document.getElementById("password").value;
+
+            if (pass === "123456789") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("notes").style.display = "block";
+            } else {
+                alert("Wrong Password! Sirf Subscribers ke liye hai.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+<div id="login">
+    <h2>Subscribers Only Access</h2>
+    <p>Password enter karo (YouTube video me diya jayega)</p>
+    <input type="password" id="password" placeholder="Enter Password">
+    <br>
+    <button onclick="checkPassword()">Login</button>
+</div>
+
+<div id="notes">
+    <h2>Exclusive Notes</h2>
+    <ul>
+        <li>C Programming Notes</li>
+        <li>C++ Basics PDF</li>
+        <li>DBMS Short Notes</li>
+        <li>Python Assignment Solutions</li>
+    </ul>
+</div>
+
+</body>
+</html>
